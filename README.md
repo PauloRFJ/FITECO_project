@@ -1,3 +1,7 @@
+# Projeto FITECO
+
+Projeto do curso Floripa Mais Tec, iniciado na semana 10 do curso, iniciando o aprendizado com REACT utilizado VITE e JavaScript
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
