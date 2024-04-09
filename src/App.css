@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.container h1{
+    font-size: 48px;
+    font-weight: 600;
+    color: #504908;
+    margin: 80px;
+}
+
+.app{
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

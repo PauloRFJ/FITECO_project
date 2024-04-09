@@ -1,0 +1,38 @@
+[
+ {
+  "image": "https://s2.wklcdn.com/image_218/6555574/94504533/62000834Master.jpg",
+  "titulo": "Trilha do Poção",
+  "autor": "Paulo Freitas",
+  "cidade": "Florianópolis",
+  "estado": "Sc",
+  "tempoEmHora": 0,
+  "tempoEmMin": 50,
+  "trajeto": 1.54,
+  "dificuldade": "Iniciante",
+  "tipo": "Caminhada"
+ },
+ {
+  "image": "https://s2.wklcdn.com/image_280/8414803/79084190/51389438Master.jpg",
+  "titulo": "Circuito Dunas da Joaquina",
+  "autor": "Paulo Freitas",
+  "cidade": "Florianópolis",
+  "estado": "Sc",
+  "tempoEmHora": 3,
+  "tempoEmMin": 15,
+  "trajeto": 9.61,
+  "dificuldade": "Fácil",
+  "tipo": "Caminhada"
+ },
+ {
+  "image": "https://s1.wklcdn.com/image_138/4149900/31382135/22370170Master.jpg",
+  "titulo": "Trilha de Naufragados",
+  "autor": "Paulo Freitas",
+  "cidade": "Florianópolis",
+  "estado": "Sc",
+  "tempoEmHora": 2,
+  "tempoEmMin": 51,
+  "trajeto": 5.93,
+  "dificuldade": "Fácil",
+  "tipo": "Caminhada"
+ }
+]

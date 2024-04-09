@@ -1,0 +1,81 @@
+.card {
+    display: flex;
+    box-shadow: 0.5px 3px 3px rgb(139, 139, 139);
+    width: 1000px;
+    height: 351px;
+    align-items: center;
+    margin-top: 50px;
+    color: #0D1A26;
+}
+
+.img_card {
+    height: 351px;
+}
+
+.img_card img {
+    width: 400px;
+    height: 351px;
+    object-fit: cover;
+}
+
+.description_card {
+    font-size: 16px;
+    width: 550px;
+    height: 300px;
+    margin-left: 25px;
+    line-height: 40px;
+}
+
+.description_card h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.description_card hr{
+    width: 40px;
+}
+
+.p_autor{
+    text-align: end;
+}
+
+.info_trajeto{
+    color: #5C6670;
+}
+
+.difficult_card{
+    background-color: #EFF0F0;
+    padding: 6px 8px 6px 8px;
+    border-radius: 32px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.avaliacao_card{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.avaliacao_card a{
+    color: #0D1A26;
+    position: relative;
+    bottom: 5px;
+}
+
+.avaliacao_card a:visited{
+    color: #0D1A26;
+}
+
+.stars_card{
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.stars_card box-icon{
+    width: 40px;
+    height: 28.5px;
+    cursor: pointer;
+    padding: 0 5px 0 5px;
+}
