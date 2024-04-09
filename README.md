@@ -1,6 +1,8 @@
 # Projeto FITECO
 
-Projeto do curso Floripa Mais Tec, iniciado na semana 10 do curso, iniciando o aprendizado com REACT utilizado VITE e JavaScript
+Projeto do curso Floripa Mais Tec, iniciado na semana 10 do curso, iniciando o aprendizado com REACT utilizado VITE e JavaScript.
+
+Reunindo tanto a parte fitness quanto a parte junto a natureza das caminhadas em trilhas.
 
 # React + Vite
 
