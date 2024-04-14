@@ -1,17 +1,18 @@
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <div className="navbar">
       <div className="header_navbar">
-        <img
+        <Link to="/"><img
          className="logo-circulo"
          src="../src/img/Fiteco_menor.png"
          alt="logo-circulo"
-         />
+         /></Link>
         <div>
-          <a href="">Explorar Trilhas</a>
-          <a href="">Cadastrar trilhas</a>
+          <Link to="/Trilhas">Explorar Trilhas</Link>
+          <Link to="/Cadastrar">Cadastrar trilhas</Link>
         </div>
       </div>
       <img

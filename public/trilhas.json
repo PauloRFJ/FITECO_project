@@ -1,4 +1,5 @@
-[
+{
+ "trilhas": [
  {
   "image": "https://s2.wklcdn.com/image_218/6555574/94504533/62000834Master.jpg",
   "titulo": "Trilha do Poção",
@@ -36,3 +37,4 @@
   "tipo": "Caminhada"
  }
 ]
+}

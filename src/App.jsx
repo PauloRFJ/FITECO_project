@@ -1,30 +1,20 @@
-import Card from "./components/card/Card";
+import React from "react";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/footer";
 import "./App.css";
-import useFetch from "./hooks/useFetch";
+import { Outlet } from "react-router-dom";
+import { TrilhasContextProvider } from "./context/TrilhasContext";
 
 function App() {
- const [trilhas, loading, isVisibleFromFetch] = useFetch("/trilhas.json");
-
- return (
-  <div className="container">
-   <Header />
-   <h1>Explore trilhas incríveis</h1>
-   {isVisibleFromFetch && (
-    <>
-     {loading && <p>Loading trails...</p>}
-     {!loading && trilhas !== null && (
-      <div className="app">
-       {trilhas.map((item, index) => (
-        <Card key={index} {...item} />
-       ))}
-      </div>
-     )}
-    </>
-   )}
-   <Footer />
-  </div>
+ 
+return (
+  <TrilhasContextProvider>
+    <div className="container">
+     <Header />
+     <Outlet />
+     <Footer />
+    </div>
+  </TrilhasContextProvider>
  );
 }
 
