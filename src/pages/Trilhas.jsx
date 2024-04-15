@@ -11,8 +11,8 @@ function Trilhas() {
             <h1>Explore trilhas incríveis</h1>
       <div className="app">
      {Array.isArray(trilhas) && !loading ? (
-        trilhas.map((trilha, index) => (
-            <Card key={index} dadosTrilha={trilha} />      
+        trilhas.map((trilhas, index) => (
+            <Card key={index} dadosTrilha={trilhas} />      
      ))
        ) : (
         <span>Carregando...</span>
