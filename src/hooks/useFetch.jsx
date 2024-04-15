@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 function useFetch(url) {
  const [data, setData] = useState([]);
  const [loading, setLoading] = useState(false);
-//  const [isVisible, setIsVisible] = useState(true);
 
  useEffect(() => {
   setLoading(true);
@@ -17,10 +16,6 @@ function useFetch(url) {
     console.error(error);
    })
    .finally(() => setLoading(false));
-
-//   return () => {
-//    setIsVisible(false);
-//   };
  }, [url]);
 
  return [data, loading];
