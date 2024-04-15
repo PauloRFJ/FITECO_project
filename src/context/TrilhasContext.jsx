@@ -4,7 +4,7 @@ import useFetch from "../hooks/useFetch";
 export const TrilhasContext = createContext()
 
 export const TrilhasContextProvider = ({children}) => {
-    const [dados, loading] = useFetch("/public/trilhas.json");
+    const [dados, loading] = useFetch("/trilhas.json");
     const [trilhas, setTrilhas] = useState([]);
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export const TrilhasContextProvider = ({children}) => {
     }, [dados]);
 
     return (
-        <TrilhasContext.Provider value={{trilhas, setTrilhas}}>
+        <TrilhasContext.Provider value={{trilhas, setTrilhas, loading, dados}}>
             {children}
         </TrilhasContext.Provider>
     )

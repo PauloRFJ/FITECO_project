@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
 function useFetch(url) {
- const [data, setData] = useState(null);
+ const [data, setData] = useState([]);
  const [loading, setLoading] = useState(false);
- const [isVisible, setIsVisible] = useState(true);
+//  const [isVisible, setIsVisible] = useState(true);
 
  useEffect(() => {
   setLoading(true);
@@ -18,12 +18,12 @@ function useFetch(url) {
    })
    .finally(() => setLoading(false));
 
-  return () => {
-   setIsVisible(false);
-  };
+//   return () => {
+//    setIsVisible(false);
+//   };
  }, [url]);
 
- return [data, loading, isVisible];
+ return [data, loading];
 }
 
 export default useFetch;
