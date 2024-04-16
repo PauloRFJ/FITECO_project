@@ -1,0 +1,157 @@
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montSerrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    /* Adicione aqui outros formatos de arquivo, como woff2, woff, etc., se disponíveis */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    /* Outros estilos para o corpo do documento */
+  }
+  
+  
+  /*reset Css */
+  * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+  
+    
+    /* Estilos para o CONTEÚDO PRINCIPAL */
+    .main-content {
+      background: #000000 url('../img/pexels-quang-nguyen-vinh-2132087.jpg') no-repeat center center;
+      opacity: 0.9;
+      color: #fff;
+      width: 100vw;
+      height: 1024px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .centered-content {
+      text-align: center;
+    }
+    
+    .container h1{
+        font-size: 65px;
+        font-weight: 600;
+        color: #504908;
+        margin: 80px;
+        padding: 50px;
+    }
+
+    .subtitle {
+        font-size: 65px;
+        font-weight: 600;
+        color: white !important;
+        margin: 80px;
+        padding: 50px;
+    }
+    
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 50px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #504908;
+      color: #fff;
+      border-color: black;
+      border-style: solid;
+      border-width: 3px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #0056b3;
+    }
+    
+    /* Estilos para a SEGUNDA DIV */
+    .second-div {
+      width: 1350px;
+      display: flex;    
+      flex-direction: column;
+      margin: 100px 0 0 83px;
+    }
+  
+    .second-div h1 {
+      font-size: 48px;
+      margin-bottom: 122px;
+    }
+    
+    
+    /* Estilos para a TERCEIRA DIV */
+    .third-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 50px;
+    }
+    
+    .inner-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 250px;
+    }
+  
+    .inner-div h1 {
+      margin-bottom: 30px;
+      font-size: 4rem;
+    }
+    
+    /* Estilos para o FOOTER */
+    .footer {
+      width: 100vw;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 10px;
+      background-color: #504908;
+      ;
+      color: #fff;
+    } 
+    
+    .social-icons a {
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+      padding: 0 20px;
+    }
+  
+  
+    .social-icons {
+      margin-right: 90px;
+    }
+    
+    .logo {
+      width: 500px;
+      height: 200px;
+      margin-left: 30px;
+      margin-bottom: 10px;
+    }
+  
+    .foto1 {
+      width: 617.14px;
+      height: 330px;
+    }
+    
+    .company-logo {
+      width: 200px;
+      height: 60px;
+      margin-left: 30px;
+    }
+  
+    .box {
+      margin: 0 0 0 180px;
+    }

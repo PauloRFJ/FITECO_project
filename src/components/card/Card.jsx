@@ -71,23 +71,23 @@ function Card(props) {
  return (
   <div className="card">
    <div className="img_card">
-    <img src={props.image} />
+    <img src={props.dadosTrilha.image} />
    </div>
 
    <div className="description_card">
     <h3>
-     {props.titulo} - {props.cidade} / {props.estado}
+     {props.dadosTrilha.titulo} - {props.dadosTrilha.cidade} / {props.dadosTrilha.estado}
     </h3>
     <hr />
     <p className="p_autor">
-     <strong>Por: {props.autor}</strong>
+     <strong>Por: {props.dadosTrilha.autor}</strong>
     </p>
     <div className="info_trajeto">
-      <p>Dificuldade: {props.dificuldade}</p>
-      <p>Duração: {props.tempoEmHora} h e {props.tempoEmMin} min</p>
-      <p>Trajeto: {props.trajeto} km</p>
+      <p>Dificuldade: {props.dadosTrilha.dificuldade}</p>
+      <p>Duração: {props.dadosTrilha.tempoEmHora} h e {props.dadosTrilha.tempoEmMin} min</p>
+      <p>Trajeto: {props.dadosTrilha.trajeto} km</p>
     </div>
-    <span className="difficult_card">{props.dificuldade}!</span>
+    <span className="difficult_card">{props.dadosTrilha.dificuldade}!</span>
 
     <div className="avaliacao_card">
      <div className="stars_card">
