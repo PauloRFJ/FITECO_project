@@ -1,10 +1,10 @@
 
-
+import './Cadastrar.css';
 
 
 function Cadastrar() {
     return (
-        <div>
+        <div className="cadastrar">
             <h1>Cadastrar</h1>
         </div>
     );
