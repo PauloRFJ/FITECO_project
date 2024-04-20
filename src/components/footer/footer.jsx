@@ -1,5 +1,6 @@
 import "./footer.css";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
@@ -7,9 +8,21 @@ function Footer() {
             <footer className="footer">
         <img src="../src/img/Fiteco.png" alt="Logo" className="company-logo" />
         <div className="social-icons">
-          <a href="#" className='github'><FaGithub/></a>
-          <a href="#" className='linkedin'><FaLinkedin/></a>
-          <a href="#" className='instagram'><FaInstagram/></a>
+          <Link 
+            to="https://github.com/PauloRFJ" 
+            className='github'
+            target="_blank"
+            ><FaGithub/></Link>
+          <Link 
+            to="https://www.linkedin.com/in/paulo-roberto-freitas-junior-782711261/" 
+            className='linkedin'
+            target="_blank"
+            ><FaLinkedin/></Link>
+          <Link 
+            to="https://www.instagram.com/proberto.fjr/" 
+            className='instagram'
+            target="_blank"
+            ><FaInstagram/></Link>
         </div>
       </footer>
         </div>
