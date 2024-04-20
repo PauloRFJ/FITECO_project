@@ -84,7 +84,7 @@ function Card(props) {
     </p>
     <div className="info_trajeto">
       <p>Dificuldade: {props.dadosTrilha.dificuldade}</p>
-      <p>Duração: {props.dadosTrilha.tempoEmHora} h e {props.dadosTrilha.tempoEmMin} min</p>
+      <p>Duração: {props.dadosTrilha.duracaoMin} minutos</p>
       <p>Trajeto: {props.dadosTrilha.trajeto} km</p>
     </div>
     <span className="difficult_card">{props.dadosTrilha.dificuldade}!</span>
@@ -105,7 +105,7 @@ function Card(props) {
       ))}
      </div>
 
-     <a href="">Avaliações</a>
+     {/* <a href="">Avaliações</a> */}
     </div>
    </div>
   </div>

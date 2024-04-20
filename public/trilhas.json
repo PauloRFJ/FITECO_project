@@ -6,8 +6,7 @@
   "autor": "Paulo Freitas",
   "cidade": "Florianópolis",
   "estado": "Sc",
-  "tempoEmHora": 0,
-  "tempoEmMin": 50,
+  "duracaoMin": 50,
   "trajeto": 1.54,
   "dificuldade": "Iniciante",
   "tipo": "Caminhada"
@@ -18,8 +17,7 @@
   "autor": "Paulo Freitas",
   "cidade": "Florianópolis",
   "estado": "Sc",
-  "tempoEmHora": 3,
-  "tempoEmMin": 15,
+  "duracaoMin": 195,
   "trajeto": 9.61,
   "dificuldade": "Iniciante",
   "tipo": "Caminhada"
@@ -30,8 +28,7 @@
   "autor": "Paulo Freitas",
   "cidade": "Florianópolis",
   "estado": "Sc",
-  "tempoEmHora": 2,
-  "tempoEmMin": 51,
+  "duracaoMin": 171,
   "trajeto": 5.93,
   "dificuldade": "Iniciante",
   "tipo": "Caminhada"

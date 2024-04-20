@@ -1,71 +1,101 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import './Form.css'
+import { useContext } from 'react';
+import { TrilhasContext } from '../../context/TrilhasContext';
 
 export default function Form() {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
-  console.log(errors);
+  const {addTrilha} = useContext(TrilhasContext);
+  // const onSubmit = data => console.log(data);
+  // console.log(errors);
+
+  function onSubmit(trilhas) {
+    console.log(trilhas);
+    console.log(errors);
+
+    addTrilha(trilhas)
+  }
+
+  function addTrilhas(trilha) {
+    fetch('/public/trilhas.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(trilha),
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log('Dados salvos com sucesso:', result);
+      })
+      .catch(error => {
+        console.error('Erro ao salvar os dados:', error);
+      });
+
+      addTrilhas(trilha)
+  }
   
+
   return (
       <form onSubmit={handleSubmit(onSubmit)} className='form'>
-      <input className='w596' type="text" placeholder="Nome da trilha" {...register("Nome da trilha", {required: true})} />
+      <input className='w596' type="text" placeholder="Nome da trilha" {...register("titulo", {required: true})} />
       <div className="inputsRow">        
-         <input className='w286' type="number" placeholder="Duração estimada (min)" {...register("Duração estimada (min)", {required: true})} />
-         <input className='w286' type="number" placeholder="Trajeto (km)" {...register("Trajeto (km)", {required: true, max: 4})} />
+         <input className='w286' type="number" placeholder="Duração estimada (min)" {...register("duracaoMin", {required: true})} />
+         <input className='w286' type="number" placeholder="Trajeto (km)" {...register("trajeto", {required: true})} />
       </div>
       <div className="inputsRow">
-         <input className='w286' type="text" placeholder="Cidade" {...register("Cidade", {required: true, maxLength: 50})} />
-         <select className='w286' {...register("Estado", { required: true })}>
-            <option value="Selecione" selected>------------------- Estado -------------------</option>
-            <option value="Acre">Acre</option>
-            <option value="Alagoas">Alagoas</option>
-            <option value="Amapá">Amapá</option>
-            <option value="Amazonas">Amazonas</option>
-            <option value="Bahia">Bahia</option>
-            <option value="Ceará">Ceará</option>
-            <option value="Distrito Federal">Distrito Federal</option>
-            <option value="Espírito Santo">Espírito Santo</option>
-            <option value="Goiás">Goiás</option>
-            <option value="Maranhão">Maranhão</option>
-            <option value="Mato Grosso">Mato Grosso</option>
-            <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-            <option value="Minas Gerais">Minas Gerais</option>
-            <option value="Pará">Pará</option>
-            <option value="Paraíba">Paraíba</option>
-            <option value="Paraná">Paraná</option>
-            <option value="Pernambuco">Pernambuco</option>
-            <option value="Piauí">Piauí</option>
-            <option value="Rio de Janeiro">Rio de Janeiro</option>
-            <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-            <option value="Rio Grande do Sul">Rio Grande do Sul</option>
-            <option value="Rondônia">Rondônia</option>
-            <option value="Roraima">Roraima</option>
-            <option value="Santa Catarina">Santa Catarina</option>
-            <option value="São Paulo">São Paulo</option>
-            <option value="Sergipe">Sergipe</option>
-            <option value="Tocantins">Tocantins</option>
+         <input className='w286' type="text" placeholder="Cidade" {...register("cidade", {required: true, maxLength: 50})} />
+         <select defaultValue={"Selecione"} className='w286' {...register("estado", { required: true })}>
+            <option value="Selecione">------------------- Estado -------------------</option>
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
           </select>
       </div>
       <div className="inputsRow">
-          <input className='w286' type="text" placeholder="Nome completo usuário" {...register("Nome completo usuário", {required: true, max: 0, maxLength: 50})} />
-          <select className='w286' {...register("Dificuldade", { required: true })}>
-            <option value="Selecione" selected>----------------- Dificuldade ----------------</option>
+          <input className='w286' type="text" placeholder="Nome completo usuário" {...register("autor", {required: true, max: 0, maxLength: 50})} />
+          <select defaultValue={"SelecioneD"} className='w286' {...register("dificuldade", { required: true })}>
+            <option value="SelecioneD">----------------- Dificuldade ----------------</option>
             <option value="Iniciante">Iniciante</option>
             <option value="Moderado">Moderado</option>
             <option value="Experiente">Experiente</option>
           </select>
       </div>
-      <select className='w596' {...register("Tipo de trilha", { required: true })}>
-        <option value="Selecione" selected>------------------------------------------------ Tipo de trilha ------------------------------------------------------</option>
+      <select defaultValue={"SelecioneT"} className='w596' {...register("tipo", { required: true })}>
+        <option value="SelecioneT">------------------------------------------------ Tipo de trilha ------------------------------------------------------</option>
         <option value="Caminhada">Caminhada</option>
         <option value="Trekking">Trekking</option>
         <option value="Aquatrekking">Aquatrekking</option>
       </select>
-      <input className='w596' type="url" placeholder="URL imagem da trilha" {...register("URL imagem da trilha", {})} />
+      <input className='w596' type="url" placeholder="URL imagem da trilha" {...register("image", {})} />
 
       <div className="buttons">
-        <button>Cadastrar</button>
+        <button type='submit'>Cadastrar</button>
         <button className='btn-voltar voltar'>Voltar</button>
       </div>
     </form>
