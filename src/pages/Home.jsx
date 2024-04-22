@@ -7,7 +7,7 @@ function Home() {
       <div>
         <div className="main-content">
         <div className="centered-content">
-          <img src={"../../public/img/Fiteco_maior.png"} className="logo" alt="logo_maior" />
+          <img src={"../../public/Fiteco_maior.png"} className="logo" alt="logo_maior" />
           <h1 className="subtitle">Que tal aproveitar um tempo com a natureza?</h1>
           <h3 className='h3centered'>
             Junte-se à comunidade de entusiastas ao ar livre, compartilhe suas
@@ -35,7 +35,7 @@ function Home() {
           <h1>Compartilhe fotos, dicas e localização das suas trilhas favoritas</h1>
           <Link to="/Cadastrar"><button>Cadastrar nova trilha</button></Link>
         </div>
-        <img src={"../../public/img/Caminho_principal.png"} alt="Imagem de trilha" className='foto1'/>
+        <img src={"../../public/Caminho_principal.png"} alt="Imagem de trilha" className='foto1'/>
       </div>
       </div>
     );
