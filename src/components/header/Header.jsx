@@ -7,7 +7,7 @@ function Header() {
       <div className="header_navbar">
         <Link to="/"><img
          className="logo-circulo"
-         src="../src/img/Fiteco_menor.png"
+         src="../../../public/img/Fiteco_menor.png"
          alt="logo-circulo"
          /></Link>
         <div>

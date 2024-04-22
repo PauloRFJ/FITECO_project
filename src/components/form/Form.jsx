@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { TrilhasContext } from '../../context/TrilhasContext';
 
 export default function Form() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const {addTrilha} = useContext(TrilhasContext);
   // const onSubmit = data => console.log(data);
   // console.log(errors);
@@ -14,7 +14,9 @@ export default function Form() {
     console.log(trilhas);
     console.log(errors);
 
-    addTrilha(trilhas)
+    addTrilha(trilhas);
+    alert("Nova trilha cadastrada com sucesso!");
+      reset();
   }
 
   function addTrilhas(trilha) {
@@ -33,7 +35,11 @@ export default function Form() {
         console.error('Erro ao salvar os dados:', error);
       });
 
-      addTrilhas(trilha)
+      addTrilhas(trilha);
+  }
+
+  function handleVoltar() {
+    window.history.back();
   }
   
 
@@ -96,7 +102,7 @@ export default function Form() {
 
       <div className="buttons">
         <button type='submit'>Cadastrar</button>
-        <button className='btn-voltar voltar'>Voltar</button>
+        <button className='btn-voltar voltar' onClick={handleVoltar}>Voltar</button>
       </div>
     </form>
   );

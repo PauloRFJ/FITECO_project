@@ -6,7 +6,7 @@ function Footer() {
     return (
         <div>
             <footer className="footer">
-        <img src="../src/img/Fiteco.png" alt="Logo" className="company-logo" />
+        <img src="../../../public/img/Fiteco.png" alt="Logo" className="company-logo" />
         <div className="social-icons">
           <Link 
             to="https://github.com/PauloRFJ" 
